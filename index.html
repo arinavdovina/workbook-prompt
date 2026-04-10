@@ -19,235 +19,162 @@
   --line: #E4DDD7;
 }
 
-body {
-  font-family: 'Outfit', sans-serif;
-  background: var(--bg);
-  color: var(--ink);
-  min-height: 100vh;
-}
+body { font-family: 'Outfit', sans-serif; background: var(--bg); color: var(--ink); min-height: 100vh; }
 
-/* ─ header ─ */
 header {
-  background: var(--ink);
-  height: 54px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
-  position: sticky;
-  top: 0;
-  z-index: 99;
+  background: var(--ink); height: 54px;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 20px; position: sticky; top: 0; z-index: 99;
 }
-.logo {
-  font-family: 'Playfair Display', serif;
-  font-size: 20px;
-  color: #fff;
-  letter-spacing: -0.2px;
-}
+.logo { font-family: 'Playfair Display', serif; font-size: 20px; color: #fff; }
 .logo i { font-style: italic; color: #FF6B4A; }
-.badge {
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  color: var(--ink-soft);
-}
+.badge { font-size: 10px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-soft); }
 
-/* ─ layout ─ */
-.container {
-  max-width: 620px;
-  margin: 0 auto;
-  padding: 36px 16px 120px;
-}
+.container { max-width: 620px; margin: 0 auto; padding: 36px 16px 120px; }
 
-/* ─ hero ─ */
-.hero { margin-bottom: 32px; }
-.hero h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 30px;
-  line-height: 1.18;
-  letter-spacing: -.4px;
-  margin-bottom: 8px;
-}
+.hero { margin-bottom: 28px; }
+.hero h1 { font-family: 'Playfair Display', serif; font-size: 30px; line-height: 1.18; letter-spacing: -.4px; margin-bottom: 8px; }
 .hero h1 i { font-style: italic; color: var(--red); }
-.hero p {
-  font-size: 14px;
-  color: var(--ink-mid);
-  line-height: 1.6;
-}
+.hero p { font-size: 14px; color: var(--ink-mid); line-height: 1.6; }
 
-/* ─ section block ─ */
-.block {
-  background: var(--white);
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  padding: 20px;
-  margin-bottom: 12px;
-}
+.block { background: var(--white); border: 1px solid var(--line); border-radius: 14px; padding: 20px; margin-bottom: 12px; }
+.block-title { font-size: 10.5px; font-weight: 600; letter-spacing: .13em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 14px; }
 
-.block-title {
-  font-size: 10.5px;
-  font-weight: 600;
-  letter-spacing: .13em;
-  text-transform: uppercase;
-  color: var(--ink-soft);
-  margin-bottom: 14px;
-}
+.label { display: block; font-size: 11.5px; font-weight: 600; color: var(--ink-mid); margin-bottom: 6px; letter-spacing: .04em; }
 
-/* ─ field ─ */
-.label {
-  display: block;
-  font-size: 11.5px;
-  font-weight: 600;
-  color: var(--ink-mid);
-  margin-bottom: 6px;
-  letter-spacing: .04em;
-}
-
-input[type=text],
-select,
-textarea {
-  width: 100%;
-  font-family: 'Outfit', sans-serif;
-  font-size: 14.5px;
-  color: var(--ink);
-  background: var(--white);
-  border: 1.5px solid var(--line);
-  border-radius: 10px;
-  padding: 10px 13px;
-  outline: none;
-  transition: border-color .18s;
-  appearance: none;
-  -webkit-appearance: none;
+input[type=text], select, textarea {
+  width: 100%; font-family: 'Outfit', sans-serif; font-size: 14.5px; color: var(--ink);
+  background: var(--white); border: 1.5px solid var(--line); border-radius: 10px;
+  padding: 10px 13px; outline: none; transition: border-color .18s;
+  appearance: none; -webkit-appearance: none;
 }
 select {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23A8958C'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 12px center;
-  padding-right: 34px;
-  cursor: pointer;
+  background-repeat: no-repeat; background-position: right 12px center;
+  padding-right: 34px; cursor: pointer;
 }
 input:focus, select:focus, textarea:focus { border-color: var(--red); }
 textarea { resize: vertical; min-height: 76px; line-height: 1.6; }
 .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 
-/* ─ lang pills ─ */
-.lang-row {
-  display: flex;
-  gap: 7px;
-  flex-wrap: wrap;
-}
+/* lang */
+.lang-row { display: flex; gap: 7px; flex-wrap: wrap; }
 .lang-pill {
-  flex: 1 1 calc(20% - 7px);
-  min-width: 56px;
-  border: 1.5px solid var(--line);
-  background: var(--white);
-  border-radius: 10px;
-  padding: 9px 4px 8px;
-  font-family: 'Outfit', sans-serif;
-  font-size: 12px;
-  font-weight: 500;
-  color: var(--ink-mid);
-  cursor: pointer;
-  text-align: center;
-  line-height: 1.4;
-  transition: all .15s;
+  flex: 1 1 calc(20% - 7px); min-width: 56px;
+  border: 1.5px solid var(--line); background: var(--white); border-radius: 10px;
+  padding: 9px 4px 8px; font-family: 'Outfit', sans-serif; font-size: 12px; font-weight: 500;
+  color: var(--ink-mid); cursor: pointer; text-align: center; line-height: 1.4; transition: all .15s;
 }
 .lang-pill:hover { border-color: var(--red); color: var(--red); }
 .lang-pill.on { background: var(--red); border-color: var(--red); color: #fff; font-weight: 600; }
 .slide-in { display: none; margin-top: 10px; }
 .slide-in.open { display: block; }
 
-/* ─ cefr bar ─ */
+/* cefr */
 .cefr-dots { display: flex; gap: 4px; margin-top: 7px; }
 .cefr-dot { flex: 1; height: 4px; border-radius: 2px; background: var(--line); transition: background .22s; }
 .cefr-dot.on { background: var(--red); }
 
-/* ─ skill grid ─ */
-.skill-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
-}
+/* skill */
+.skill-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
 .skill-pill {
-  border: 1.5px solid var(--line);
-  background: var(--white);
-  border-radius: 10px;
-  padding: 12px 6px 10px;
-  font-family: 'Outfit', sans-serif;
-  font-size: 12.5px;
-  font-weight: 500;
-  color: var(--ink-mid);
-  cursor: pointer;
-  text-align: center;
-  transition: all .15s;
+  border: 1.5px solid var(--line); background: var(--white); border-radius: 10px;
+  padding: 12px 6px 10px; font-family: 'Outfit', sans-serif; font-size: 12.5px; font-weight: 500;
+  color: var(--ink-mid); cursor: pointer; text-align: center; transition: all .15s;
 }
 .skill-pill span { display: block; font-size: 20px; margin-bottom: 4px; }
 .skill-pill:hover { border-color: var(--red); }
 .skill-pill.on { background: var(--red-bg); border-color: var(--red); color: var(--red); font-weight: 600; }
 
-/* ─ design cards ─ */
-.design-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
-  margin-bottom: 10px;
+/* ── TOOLS SECTION ── */
+.tools-block {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 20px;
+  margin-bottom: 12px;
+  display: none;
 }
-.design-pill {
+.tools-block.open { display: block; }
+.tools-subtitle {
+  font-size: 11.5px;
+  color: var(--ink-mid);
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+.tools-subtitle strong { color: var(--red); }
+
+.tools-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+
+.tool-card {
   border: 1.5px solid var(--line);
-  border-radius: 10px;
-  padding: 10px 8px;
+  border-radius: 12px;
+  padding: 12px 13px;
   cursor: pointer;
-  text-align: center;
   transition: all .15s;
   position: relative;
+  overflow: hidden;
+  background: var(--white);
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  text-align: left;
 }
-.design-pill:hover { border-color: var(--red); }
-.design-pill.on { border-color: var(--red); background: var(--red-bg); }
-.design-pill.on::after {
+.tool-card:hover { border-color: var(--red); background: var(--red-bg); }
+.tool-card.on { border-color: var(--red); background: var(--red-bg); }
+.tool-card.on::after {
   content: '✓';
   position: absolute;
-  top: 5px; right: 7px;
-  font-size: 10px;
+  top: 7px; right: 9px;
+  font-size: 11px; font-weight: 700;
   color: var(--red);
-  font-weight: 700;
 }
-.design-swatch {
-  height: 28px;
-  border-radius: 5px;
-  margin-bottom: 6px;
+
+/* pro / new badge on tool */
+.tool-ribbon {
+  position: absolute;
+  top: 0; left: 0;
+  font-size: 8.5px;
+  font-weight: 700;
+  padding: 3px 6px;
+  border-radius: 0 0 6px 0;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+.tool-ribbon.pro { background: #7C5CBF; color: #fff; }
+.tool-ribbon.new { background: #1A9E72; color: #fff; }
+
+.tool-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 3px;
+  font-size: 18px;
+}
+.tool-text { flex: 1; min-width: 0; }
+.tool-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.3;
+  margin-bottom: 3px;
+  padding-right: 14px;
+}
+.tool-desc {
+  font-size: 11.5px;
+  color: var(--ink-soft);
+  line-height: 1.45;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
   overflow: hidden;
 }
-.dn { font-size: 11.5px; font-weight: 600; color: var(--ink); display: block; }
-.ds { font-size: 10px; color: var(--ink-soft); }
 
-/* ─ chips ─ */
-.chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 7px;
-}
-.chip {
-  font-family: 'Outfit', sans-serif;
-  font-size: 12.5px;
-  font-weight: 500;
-  padding: 6px 13px;
-  border-radius: 20px;
-  border: 1.5px solid var(--line);
-  background: var(--bg);
-  color: var(--ink-mid);
-  cursor: pointer;
-  transition: all .13s;
-  user-select: none;
-}
-.chip:hover { border-color: var(--red); color: var(--red); }
-.chip.on { background: var(--red); border-color: var(--red); color: #fff; }
-.chips-echo {
-  margin-top: 10px;
+.tools-selected-bar {
+  margin-top: 12px;
   padding: 9px 12px;
   background: var(--bg);
   border: 1px solid var(--line);
@@ -256,97 +183,57 @@ textarea { resize: vertical; min-height: 76px; line-height: 1.6; }
   color: var(--ink-mid);
   line-height: 1.7;
   min-height: 36px;
-}
-.chips-echo em { color: var(--ink-soft); font-style: normal; }
-
-/* ─ divider ─ */
-hr { border: none; border-top: 1px solid var(--line); margin: 16px 0; }
-
-/* ─ generate button ─ */
-.gen-bar {
-  position: fixed;
-  bottom: 0; left: 0; right: 0;
-  padding: 12px 16px 20px;
-  background: linear-gradient(to top, var(--bg) 65%, transparent);
-  display: flex;
-  justify-content: center;
-  z-index: 50;
-}
-.gen-btn {
-  max-width: 620px;
-  width: 100%;
-  background: var(--red);
-  color: #fff;
-  border: none;
-  border-radius: 13px;
-  padding: 16px 24px;
-  font-family: 'Outfit', sans-serif;
-  font-size: 15px;
-  font-weight: 600;
-  cursor: pointer;
-  letter-spacing: .01em;
-  transition: all .18s;
-  box-shadow: 0 4px 18px rgba(224,58,30,.3);
-}
-.gen-btn:hover { background: #bf3018; transform: translateY(-1px); }
-.gen-btn:active { transform: translateY(0); }
-
-/* ─ result ─ */
-.result {
-  background: var(--white);
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  overflow: hidden;
-  margin-bottom: 12px;
   display: none;
 }
+.tools-selected-bar.open { display: block; }
+
+/* design */
+.design-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 10px; }
+.design-pill {
+  border: 1.5px solid var(--line); border-radius: 10px; padding: 10px 8px;
+  cursor: pointer; text-align: center; transition: all .15s; position: relative;
+}
+.design-pill:hover { border-color: var(--red); }
+.design-pill.on { border-color: var(--red); background: var(--red-bg); }
+.design-pill.on::after { content:'✓'; position:absolute; top:5px; right:7px; font-size:10px; color:var(--red); font-weight:700; }
+.design-swatch { height: 28px; border-radius: 5px; margin-bottom: 6px; display:flex; align-items:center; justify-content:center; gap:3px; overflow:hidden; }
+.dn { font-size: 11.5px; font-weight: 600; color: var(--ink); display: block; }
+.ds { font-size: 10px; color: var(--ink-soft); }
+
+/* chips */
+.chips { display: flex; flex-wrap: wrap; gap: 7px; }
+.chip {
+  font-family: 'Outfit', sans-serif; font-size: 12.5px; font-weight: 500;
+  padding: 6px 13px; border-radius: 20px; border: 1.5px solid var(--line);
+  background: var(--bg); color: var(--ink-mid); cursor: pointer; transition: all .13s; user-select: none;
+}
+.chip:hover { border-color: var(--red); color: var(--red); }
+.chip.on { background: var(--red); border-color: var(--red); color: #fff; }
+.chips-echo { margin-top: 10px; padding: 9px 12px; background: var(--bg); border: 1px solid var(--line); border-radius: 8px; font-size: 12.5px; color: var(--ink-mid); line-height: 1.7; min-height: 36px; }
+.chips-echo em { color: var(--ink-soft); font-style: normal; }
+hr { border: none; border-top: 1px solid var(--line); margin: 16px 0; }
+
+/* result */
+.result { background: var(--white); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; margin-bottom: 12px; display: none; }
 .result.open { display: block; }
-.result-head {
-  padding: 14px 18px;
-  border-bottom: 1px solid var(--line);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-  flex-wrap: wrap;
-}
+.result-head { padding: 14px 18px; border-bottom: 1px solid var(--line); display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
 .tags { display: flex; gap: 6px; flex-wrap: wrap; }
-.tag {
-  font-size: 11px;
-  font-weight: 600;
-  padding: 3px 10px;
-  border-radius: 20px;
-  background: var(--red-bg);
-  color: var(--red);
-}
-.copy-btn {
-  font-family: 'Outfit', sans-serif;
-  font-size: 12.5px;
-  font-weight: 600;
-  padding: 7px 18px;
-  border-radius: 8px;
-  border: 1.5px solid var(--red);
-  background: var(--white);
-  color: var(--red);
-  cursor: pointer;
-  transition: all .15s;
-  white-space: nowrap;
-  flex-shrink: 0;
-}
+.tag { font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 20px; background: var(--red-bg); color: var(--red); }
+.copy-btn { font-family: 'Outfit', sans-serif; font-size: 12.5px; font-weight: 600; padding: 7px 18px; border-radius: 8px; border: 1.5px solid var(--red); background: var(--white); color: var(--red); cursor: pointer; transition: all .15s; white-space: nowrap; flex-shrink: 0; }
 .copy-btn:hover { background: var(--red); color: #fff; }
 .copy-btn.ok { background: #1a9e72; border-color: #1a9e72; color: #fff; }
-.result-body {
-  padding: 20px;
-  font-size: 13px;
-  line-height: 1.9;
-  color: var(--ink);
-  white-space: pre-wrap;
-  font-family: 'Outfit', sans-serif;
-}
+.result-body { padding: 20px; font-size: 13px; line-height: 1.9; color: var(--ink); white-space: pre-wrap; font-family: 'Outfit', sans-serif; }
+
+/* sticky gen */
+.gen-bar { position: fixed; bottom: 0; left: 0; right: 0; padding: 12px 16px 20px; background: linear-gradient(to top, var(--bg) 65%, transparent); display: flex; justify-content: center; z-index: 50; }
+.gen-btn { max-width: 620px; width: 100%; background: var(--red); color: #fff; border: none; border-radius: 13px; padding: 16px 24px; font-family: 'Outfit', sans-serif; font-size: 15px; font-weight: 600; cursor: pointer; letter-spacing: .01em; transition: all .18s; box-shadow: 0 4px 18px rgba(224,58,30,.3); }
+.gen-btn:hover { background: #bf3018; transform: translateY(-1px); }
+.gen-btn:active { transform: translateY(0); }
 
 @media (max-width: 420px) {
   .hero h1 { font-size: 25px; }
   .design-grid { grid-template-columns: repeat(2, 1fr); }
+  .tools-grid { grid-template-columns: 1fr; }
 }
 </style>
 </head>
@@ -364,7 +251,6 @@ hr { border: none; border-top: 1px solid var(--line); margin: 16px 0; }
     <p>Настрой параметры — получи готовый промпт для любого AI.</p>
   </div>
 
-  <!-- результат появляется здесь -->
   <div class="result" id="result">
     <div class="result-head">
       <div class="tags" id="tags"></div>
@@ -377,11 +263,11 @@ hr { border: none; border-top: 1px solid var(--line); margin: 16px 0; }
   <div class="block">
     <div class="block-title">Язык обучения</div>
     <div class="lang-row">
-      <button class="lang-pill on" onclick="setLang(this,'English')">🇬🇧<br>English</button>
-      <button class="lang-pill" onclick="setLang(this,'French')">🇫🇷<br>French</button>
-      <button class="lang-pill" onclick="setLang(this,'German')">🇩🇪<br>German</button>
-      <button class="lang-pill" onclick="setLang(this,'Spanish')">🇪🇸<br>Spanish</button>
-      <button class="lang-pill" onclick="setLang(this,'__other__')">✏️<br>Другой</button>
+      <button class="lang-pill on"  onclick="setLang(this,'English')">🇬🇧<br>English</button>
+      <button class="lang-pill"     onclick="setLang(this,'French')">🇫🇷<br>French</button>
+      <button class="lang-pill"     onclick="setLang(this,'German')">🇩🇪<br>German</button>
+      <button class="lang-pill"     onclick="setLang(this,'Spanish')">🇪🇸<br>Spanish</button>
+      <button class="lang-pill"     onclick="setLang(this,'__other__')">✏️<br>Другой</button>
     </div>
     <div class="slide-in" id="langSlide">
       <input type="text" id="langCustom" placeholder="Введите язык...">
@@ -415,20 +301,28 @@ hr { border: none; border-top: 1px solid var(--line); margin: 16px 0; }
     </div>
   </div>
 
-  <!-- 3 · навык -->
+  <!-- 3 · навык + tools -->
   <div class="block">
     <div class="block-title">Целевой навык</div>
     <div class="skill-grid">
-      <button class="skill-pill on" onclick="setSkill(this,'grammar')"><span>📐</span>Grammar</button>
-      <button class="skill-pill" onclick="setSkill(this,'vocabulary')"><span>📚</span>Vocabulary</button>
-      <button class="skill-pill" onclick="setSkill(this,'reading')"><span>👁</span>Reading</button>
-      <button class="skill-pill" onclick="setSkill(this,'listening')"><span>🎧</span>Listening</button>
-      <button class="skill-pill" onclick="setSkill(this,'writing')"><span>✍️</span>Writing</button>
-      <button class="skill-pill" onclick="setSkill(this,'speaking')"><span>🗣</span>Speaking</button>
+      <button class="skill-pill on"  onclick="setSkill(this,'grammar')"><span>📐</span>Grammar</button>
+      <button class="skill-pill"     onclick="setSkill(this,'vocabulary')"><span>📚</span>Vocabulary</button>
+      <button class="skill-pill"     onclick="setSkill(this,'reading')"><span>👁</span>Reading</button>
+      <button class="skill-pill"     onclick="setSkill(this,'listening')"><span>🎧</span>Listening</button>
+      <button class="skill-pill"     onclick="setSkill(this,'writing')"><span>✍️</span>Writing</button>
+      <button class="skill-pill"     onclick="setSkill(this,'speaking')"><span>🗣</span>Speaking</button>
     </div>
   </div>
 
-  <!-- 4 · тема + тональность + аудитория -->
+  <!-- tools panel (dynamic) -->
+  <div class="tools-block" id="toolsBlock">
+    <div class="block-title" id="toolsTitle">Выбери упражнения</div>
+    <p class="tools-subtitle">Нажми на нужные — они будут включены в промпт как конкретные типы заданий. <strong>Можно выбрать несколько.</strong></p>
+    <div class="tools-grid" id="toolsGrid"></div>
+    <div class="tools-selected-bar" id="toolsBar"></div>
+  </div>
+
+  <!-- 4 · тема + аудитория -->
   <div class="block">
     <div class="block-title">Тема и аудитория</div>
     <div style="margin-bottom:12px">
@@ -449,7 +343,7 @@ hr { border: none; border-top: 1px solid var(--line); margin: 16px 0; }
       <div></div>
     </div>
     <span class="label">Аудитория и интересы</span>
-    <textarea id="audience" placeholder="Напр: Взрослые 25–40 лет, офисные работники. Интересуются карьерой и путешествиями. Занимаются 2 раза в неделю, цель — разговорный уровень..."></textarea>
+    <textarea id="audience" placeholder="Напр: Взрослые 25–40 лет, офисные работники. Интересуются карьерой и путешествиями. 2 раза в неделю, цель — разговорный уровень..."></textarea>
   </div>
 
   <!-- 5 · дизайн -->
@@ -457,21 +351,15 @@ hr { border: none; border-top: 1px solid var(--line); margin: 16px 0; }
     <div class="block-title">Дизайн воркбука</div>
     <div class="design-grid">
       <div class="design-pill on" onclick="setDesign(this,'Cambridge Classic')">
-        <div class="design-swatch" style="background:#eef2ff">
-          <div style="width:58%;height:5px;background:#2d5be3;border-radius:2px"></div>
-        </div>
+        <div class="design-swatch" style="background:#eef2ff"><div style="width:58%;height:5px;background:#2d5be3;border-radius:2px"></div></div>
         <span class="dn">Cambridge</span><span class="ds">Академический</span>
       </div>
       <div class="design-pill" onclick="setDesign(this,'National Geographic Explorer')">
-        <div class="design-swatch" style="background:#111">
-          <div style="width:40%;height:8px;background:#FFD100;border-radius:1px"></div>
-        </div>
+        <div class="design-swatch" style="background:#111"><div style="width:40%;height:8px;background:#FFD100;border-radius:1px"></div></div>
         <span class="dn">Nat Geo</span><span class="ds">Визуальный</span>
       </div>
       <div class="design-pill" onclick="setDesign(this,'Minimal Nordic')">
-        <div class="design-swatch" style="background:#fafafa;border:1px solid #eee">
-          <div style="width:50%;height:3px;background:#222;border-radius:1px"></div>
-        </div>
+        <div class="design-swatch" style="background:#fafafa;border:1px solid #eee"><div style="width:50%;height:3px;background:#222;border-radius:1px"></div></div>
         <span class="dn">Nordic</span><span class="ds">Минималист</span>
       </div>
       <div class="design-pill" onclick="setDesign(this,'Colorful Kids')">
@@ -491,9 +379,7 @@ hr { border: none; border-top: 1px solid var(--line); margin: 16px 0; }
         <span class="dn">Corporate</span><span class="ds">Деловой</span>
       </div>
       <div class="design-pill" onclick="setDesign(this,'__custom__')">
-        <div class="design-swatch" style="background:var(--bg);border:1.5px dashed var(--line)">
-          <span style="font-size:17px">✏️</span>
-        </div>
+        <div class="design-swatch" style="background:var(--bg);border:1.5px dashed var(--line)"><span style="font-size:17px">✏️</span></div>
         <span class="dn">Свой стиль</span><span class="ds">Описать</span>
       </div>
     </div>
@@ -502,7 +388,7 @@ hr { border: none; border-top: 1px solid var(--line); margin: 16px 0; }
     </div>
   </div>
 
-  <!-- 6 · особые требования -->
+  <!-- 6 · чипы -->
   <div class="block">
     <div class="block-title">Особые требования</div>
     <div class="chips" id="chips"></div>
@@ -519,80 +405,147 @@ hr { border: none; border-top: 1px solid var(--line); margin: 16px 0; }
 </div>
 
 <script>
-/* ── data ─────────────────────────────── */
+/* ════════════════════════════════════════
+   TOOL CARDS per skill
+   ════════════════════════════════════════ */
+const TOOLS = {
+  grammar: [
+    { id:'fitg',    name:'Fill in the Gap',               icon:'✏️', bg:'#F3F0FF', desc:'Gaps with a word list — students restore missing words', badge:null },
+    { id:'brackets',name:'Gaps with Brackets',            icon:'[ ]', bg:'#F3F0FF', desc:'Students write the correct form from the word in brackets', badge:'pro' },
+    { id:'abcd',    name:'Gaps with ABCD',                icon:'🔤', bg:'#F3F0FF', desc:'Multiple-choice cloze — students pick A, B, C, or D', badge:'pro' },
+    { id:'slash',   name:'Two Options with a Slash',      icon:'⚡', bg:'#F3F0FF', desc:'Students choose the correct word from two options shown', badge:'pro' },
+    { id:'rewrite', name:'Rewrite the Sentence',          icon:'🔁', bg:'#F3F0FF', desc:'Students rewrite full sentences using a target structure', badge:'pro' },
+    { id:'errorcorr',name:'Error Correction',             icon:'🚨', bg:'#F3F0FF', desc:'Sentences with mistakes — students identify and fix them', badge:'pro' },
+    { id:'fillopt', name:'Fill Gaps from Options',        icon:'📋', bg:'#F3F0FF', desc:'Gap-fill with a provided word bank to choose from', badge:'pro' },
+    { id:'rules',   name:'Grammar Rules',                 icon:'📖', bg:'#F3F0FF', desc:'Customised grammar rules and explanations for the topic', badge:'pro' },
+    { id:'typeany', name:'Type Anything into a Gap',      icon:'💬', bg:'#F3F0FF', desc:'Open-ended gaps — any grammatically valid word accepted', badge:'pro' },
+    { id:'matchhalf',name:'Matching Halves',              icon:'🧩', bg:'#F3F0FF', desc:'Students match sentence halves to form complete sentences', badge:null }
+  ],
+  vocabulary: [
+    { id:'wordimg',  name:'Word–Image Matching',          icon:'🖼', bg:'#FFF0F8', desc:'Students match each word to the correct picture', badge:'new' },
+    { id:'worddef',  name:'Word–Definition Matching',     icon:'🔗', bg:'#FFF0F8', desc:'Automatically creates word-to-definition matching exercise', badge:null },
+    { id:'oddone',   name:'Odd One Out',                  icon:'❌', bg:'#FFF0F8', desc:'Students choose which word doesn\'t belong and explain why', badge:'new' },
+    { id:'wordtrans',name:'Word–Translation Matching',    icon:'🔄', bg:'#FFF0F8', desc:'Translates a word list and creates a matching exercise', badge:null },
+    { id:'essential',name:'Essential Vocabulary',         icon:'⭐', bg:'#FFF0F8', desc:'Suggests the key vocabulary items for the chosen topic', badge:null },
+    { id:'rephrase', name:'Rephrase Using the Word',      icon:'✍️', bg:'#FFF0F8', desc:'Students rewrite sentences using a given target word', badge:null },
+    { id:'extract',  name:'Extract Vocabulary',           icon:'🔍', bg:'#FFF0F8', desc:'Extracts key words and phrases from any text', badge:'new' },
+    { id:'wordsorter',name:'Word Sorter',                 icon:'📊', bg:'#FFF0F8', desc:'Students group words logically, reinforcing vocabulary', badge:'new' },
+    { id:'senttrans',name:'Sentence Translation',         icon:'🌐', bg:'#FFF0F8', desc:'Students translate target sentences with new vocabulary', badge:'new' },
+    { id:'vocabfitg',name:'Fill in the Gap',              icon:'✏️', bg:'#FFF0F8', desc:'Gaps with a word list using lesson vocabulary in context', badge:null }
+  ],
+  reading: [
+    { id:'textany',  name:'Create a Text on Any Topic',   icon:'📄', bg:'#F0F8FF', desc:'Generates a reading text integrating your vocabulary list', badge:null },
+    { id:'truefals', name:'True / False Statements',      icon:'✅', bg:'#F0F8FF', desc:'Creates T/F reading comprehension exercise from any text', badge:'pro' },
+    { id:'dialogue', name:'Create a Dialogue',            icon:'💬', bg:'#F0F8FF', desc:'Dialogue on any topic or text for students to read aloud', badge:null },
+    { id:'simplify', name:'Simplify or Upgrade Text',     icon:'⚖️', bg:'#F0F8FF', desc:'Adapts the text level up or down to match CEFR', badge:'pro' },
+    { id:'readbits', name:'Reading Bits and Pieces',      icon:'📰', bg:'#F0F8FF', desc:'Creates all kinds of small reading texts for the lesson', badge:null },
+    { id:'3titles',  name:'Create Three Titles',          icon:'3️⃣', bg:'#F0F8FF', desc:'Two wrong titles and one correct — students identify the right one', badge:null },
+    { id:'leadin',   name:'Lead-in Activities',           icon:'🚀', bg:'#F0F8FF', desc:'3 engaging warm-up activities before reading the text', badge:null }
+  ],
+  listening: [
+    { id:'warmuplis',name:'Warm-Up Before Listening',     icon:'🔊', bg:'#F0FFF8', desc:'Discussion questions to activate schema before audio task', badge:'pro' },
+    { id:'listdial', name:'Create a Dialogue',            icon:'💬', bg:'#F0FFF8', desc:'Dialogue to be used as an audio script for the lesson', badge:null },
+    { id:'listleadin',name:'Lead-in Activities',          icon:'🚀', bg:'#F0FFF8', desc:'3 ideas for engaging students before the listening task', badge:null },
+    { id:'listfacts',name:'Find Interesting Facts',       icon:'💡', bg:'#F0FFF8', desc:'10 facts on the topic for prediction or pre-teaching', badge:null },
+    { id:'listtext', name:'Create a Text on Any Topic',   icon:'📄', bg:'#F0FFF8', desc:'Text that can be read aloud or turned into a script', badge:null },
+    { id:'listtruef',name:'True / False Statements',      icon:'✅', bg:'#F0FFF8', desc:'T/F comprehension exercise based on audio content', badge:'pro' }
+  ],
+  writing: [
+    { id:'4opinions',name:'Four Opinions',                icon:'💭', bg:'#FFFAF0', desc:'4 opinions by different people — sparks discussion and writing', badge:'pro' },
+    { id:'quotes',   name:'Find Quotes by Famous People', icon:'🗣', bg:'#FFFAF0', desc:'Quotes on the topic — perfect for essay writing warm-ups', badge:null },
+    { id:'linkwords',name:'Link Words into Sentences',    icon:'🔗', bg:'#FFFAF0', desc:'Students create unique sentences using given link words', badge:null },
+    { id:'writtrans',name:'Sentence Translation',         icon:'🌐', bg:'#FFFAF0', desc:'Translation exercise developing writing accuracy', badge:'new' },
+    { id:'writtext', name:'Create a Text on Any Topic',   icon:'📄', bg:'#FFFAF0', desc:'Model text for students to analyse before writing their own', badge:null },
+    { id:'writpros', name:'Create a List of Pros & Cons', icon:'⚖️', bg:'#FFFAF0', desc:'Pros and cons list for discussion or essay planning', badge:null }
+  ],
+  speaking: [
+    { id:'warmupspk',name:'Warm-Up Discussion Questions', icon:'💬', bg:'#FFFBF0', desc:'Engaging discussion questions before the speaking task', badge:'pro' },
+    { id:'speakdial',name:'Create a Dialogue',            icon:'🎭', bg:'#FFFBF0', desc:'Dialogue as a model or role-play script for students', badge:null },
+    { id:'speaklead',name:'Lead-in Activities',           icon:'🚀', bg:'#FFFBF0', desc:'3 creative ideas to activate the speaking topic', badge:null },
+    { id:'facts',    name:'Find Interesting Facts',       icon:'💡', bg:'#FFFBF0', desc:'10 surprising facts — great for icebreakers or debates', badge:null },
+    { id:'proscons', name:'Create a List of Pros & Cons', icon:'⚖️', bg:'#FFFBF0', desc:'Use for discussions, debates, or opinion-sharing tasks', badge:null },
+    { id:'speakquo', name:'Find Quotes by Famous People', icon:'🗣', bg:'#FFFBF0', desc:'Quotes to spark conversation and critical thinking', badge:null },
+    { id:'speaklink',name:'Link Words into Sentences',    icon:'🔗', bg:'#FFFBF0', desc:'Students build sentences using discourse markers', badge:null }
+  ]
+};
+
+const TOOL_PROMPTS = {
+  // grammar
+  fitg:      'Include a Fill-in-the-Gap exercise: select 8–10 key words from the lesson, remove them from a connected paragraph, and provide the word list below the text for students to restore.',
+  brackets:  'Include a Gaps with Brackets exercise: provide sentences with the infinitive form of the verb in brackets; students write the correct form in the gap.',
+  abcd:      'Include a multiple-choice cloze exercise (Gaps with ABCD): for each gap provide options A, B, C, D — only one grammatically or lexically correct.',
+  slash:     'Include a Two Options with a Slash exercise: pairs of options separated by a slash in each sentence; students circle or underline the correct one.',
+  rewrite:   'Include a Rewrite the Sentence exercise: 6 sentences that students must rewrite using the target grammar structure, keeping the original meaning.',
+  errorcorr: 'Include an Error Correction exercise: 8 sentences each containing exactly one typical learner error for this level; students identify and correct it.',
+  fillopt:   'Include a Fill Gaps from a List of Options exercise: gap-fill paragraph with a provided box of words — more words than gaps to make it challenging.',
+  rules:     'Include a Grammar Rules reference box: concise, student-friendly explanation of the target structure with clear examples at this CEFR level.',
+  typeany:   'Include a Type Anything into a Gap task: open-ended gaps where any grammatically valid and contextually appropriate word is accepted; 3–5 possible answers per gap in the answer key.',
+  matchhalf: 'Include a Matching Halves exercise: 8 sentence beginnings in column A and 8 endings in column B; students match them to form correct, meaningful sentences.',
+  // vocabulary
+  wordimg:   'Include a Word–Image Matching exercise: 8 target words, each to be matched to a described image (provide [IMAGE: description] placeholders for the visuals).',
+  worddef:   'Include a Word–Definition Matching exercise: target vocabulary items in one column, definitions in randomised order in another.',
+  oddone:    'Include an Odd One Out exercise: 6 groups of 4 words; students identify the word that does not belong and write one sentence explaining why.',
+  wordtrans: 'Include a Word–Translation Matching exercise: target words in the target language matched to their translations; focus on words with tricky false-friend potential.',
+  essential: 'Include an Essential Vocabulary section: a curated list of the 10–12 most important words and phrases for this topic at this CEFR level, with a brief usage note for each.',
+  rephrase:  'Include a Rephrase Using the Word Given exercise: 6 sentences to be rewritten using the word given in brackets without changing the original meaning.',
+  extract:   'Include a vocabulary extraction task: students read the main lesson text and extract 6–8 key words, note part of speech, and write an example sentence.',
+  wordsorter:'Include a Word Sorter exercise: 16 words in a jumbled list; students group them into 4 logical categories with a label they create themselves.',
+  senttrans: 'Include a Sentence Translation exercise: 6 sentences in the student\'s L1 that they translate into the target language using the lesson vocabulary.',
+  vocabfitg: 'Include a vocabulary gap-fill exercise: a connected paragraph with 8 gaps; students choose from the lesson word list to fill each gap correctly in context.',
+  // reading
+  textany:   'Create a bespoke reading text for the lesson topic (150–200 words for A1–A2, 250–350 for B1–B2, 400–500 for C1–C2) that naturally incorporates the target vocabulary and grammar.',
+  truefals:  'Include a True / False / Not Given exercise: 8 statements about the reading text; students circle the correct answer and write the line number as evidence.',
+  dialogue:  'Include a short scripted dialogue (10–14 exchanges) on the lesson topic for students to read, analyse for language, then adapt in their own version.',
+  simplify:  'Provide two versions of the main reading text: the original, and a simplified version adapted down one CEFR level — useful for differentiation.',
+  readbits:  'Include a \'Reading Bits and Pieces\' section: 3 short authentic-style mini-texts (tweet, headline, short review) all related to the lesson topic, each with one comprehension question.',
+  '3titles': 'Include a Three Titles task: write one accurate title and two plausible but incorrect titles for the reading text; students identify and justify the correct one.',
+  leadin:    'Include 3 varied lead-in activities for the reading text: a prediction task, a vocabulary activation task, and a personal experience question.',
+  // listening
+  warmuplis: 'Include a Warm-Up Before Listening activity: 4 discussion questions that activate schema and key vocabulary before students hear the audio.',
+  listdial:  'Provide a full listening script: a natural dialogue (12–16 exchanges) between two speakers on the lesson topic, with stage directions and an audio note.',
+  listleadin:'Include 3 lead-in activities for the listening task: a prediction activity, a vocabulary pre-teaching task, and an image or title response question.',
+  listfacts: 'Include a 10 Interesting Facts warm-up: 10 surprising facts about the lesson topic that students use for a prediction or true/false quiz before listening.',
+  listtext:  'Create a reading text that mirrors the audio content so students can check their listening comprehension by reading after completing the tasks.',
+  listtruef: 'Include a True / False listening task: 8 statements; students listen and mark each true or false, then justify their answers on a second listen.',
+  // writing
+  '4opinions':'Include a Four Opinions activity: 4 short statements by fictional characters expressing different views on the topic; students discuss, then write their own opinion paragraph.',
+  quotes:    'Include 5 quotes by famous people relevant to the topic; students choose one they agree or disagree with and write a short paragraph response.',
+  linkwords: 'Include a Link Words into Sentences task: 8 discourse markers or linkers; students write an original sentence for each that relates to the lesson topic.',
+  writtrans: 'Include a Sentence Translation writing task: 6 sentences in L1 with deliberate complexity; students translate them using lesson vocabulary and structures.',
+  writtext:  'Include a model text for analysis before the writing task: annotated with margin notes pointing out structural choices, useful phrases, and register features.',
+  writpros:  'Include a Pros and Cons planning task: students complete a structured table of arguments before writing an essay or discussion paragraph.',
+  // speaking
+  warmupspk: 'Include 5 Warm-Up Discussion Questions to open the speaking lesson; each question should build from personal experience toward the lesson\'s main communicative task.',
+  speakdial: 'Include a model dialogue (10–12 exchanges) as a speaking scaffold; students study its structure and language, then perform an adapted version.',
+  speaklead: 'Include 3 Lead-in Activities for the speaking task: a visual stimulus discussion, a quick ranking activity, and a personalised question.',
+  facts:     'Include 10 Interesting Facts about the lesson topic as a speaking warm-up; students react to each fact and share their own knowledge.',
+  proscons:  'Include a Pros and Cons discussion activity: structured table + speaking prompts to help students argue both sides before expressing their final view.',
+  speakquo:  'Include 4 Quotes by Famous People on the lesson topic; students discuss each quote in pairs before the main speaking task.',
+  speaklink: 'Include a Link Words activity: 8 discourse markers for spoken English; students practise using each in a spontaneous sentence about the lesson topic.'
+};
+
+/* ════════════════════════════════════════
+   METHODICAL BACKBONE
+   ════════════════════════════════════════ */
 const METHOD = {
-  grammar:{
-    label:'Grammar',
-    approach:'PPP — Presentation → Practice → Production',
-    steps:[
-      'Guided Discovery — students notice the target form in context before the rule is stated',
-      'Concept Check Questions (CCQs) — 2–3 yes/no questions verifying understanding of form, meaning, and use',
-      'Controlled Practice — gap-fill or transformation with a single correct answer',
-      'Semi-controlled Practice — guided dialogue or sentence completion; form constrained, meaning open',
-      'Freer Production — open situational task requiring natural deployment of the target structure'
-    ],
-    std:'Teach Form–Meaning–Use triad. Address the most frequent learner errors. Include a grammar reference box before controlled practice.'
-  },
-  vocabulary:{
-    label:'Vocabulary',
-    approach:"Lexical Approach + Nation's 4 Strands",
-    steps:[
-      'Lexical Mapping — semantic cluster or word-web activating prior knowledge',
-      'Meaning in Context — students deduce meaning from a connected reading passage',
-      'Controlled Matching — word-to-definition or word-to-collocation pairing',
-      'Odd One Out — identify the misfit word and justify the choice in writing',
-      'Personalised Production — 3–5 sentences about the student\'s own life using target vocabulary'
-    ],
-    std:'Teach words in natural collocations, never in isolation. Cover register and connotation. Include word-formation patterns where appropriate.'
-  },
-  reading:{
-    label:'Reading',
-    approach:'Top-down + Bottom-up Integration',
-    steps:[
-      'Pre-reading Schema Activation — predict content from title, subheading, or 3 key words',
-      'Skimming for Gist — one-sentence summary or paragraph-heading matching in 90 seconds',
-      'Scanning for Specific Information — locate 5–6 facts, names, or figures',
-      'True / False / Not Given — critical reading requiring students to cite line numbers as evidence',
-      'Vocabulary from Context — infer the meaning of 4 highlighted words using surrounding context'
-    ],
-    std:'Use authentic or semi-authentic texts. All tasks must be answerable from the text alone. Include one post-reading personalised opinion question.'
-  },
-  listening:{
-    label:'Listening',
-    approach:'Pre / While / Post Listening Framework',
-    steps:[
-      'Schema Activation — students predict 3 things they will hear; elicit topic vocabulary',
-      'Listening for Gist — one global question answered after a single complete listen',
-      'Listening for Detail — gap-fill or multiple choice on a second careful listen',
-      'Inference Task — what emotion or attitude is communicated but not stated directly?',
-      'Post-listening Response — personalised discussion question linking the audio to students\' own experience'
-    ],
-    std:'Specify audio type (dialogue / interview / monologue). Include tapescript for self-study. Each sub-task must have a distinct cognitive demand.'
-  },
-  writing:{
-    label:'Writing',
-    approach:'Process Writing Approach (Hedge, 2005)',
-    steps:[
-      'Model Text Analysis — identify structure, register, and key language features of a sample text',
-      'Brainstorming — mind-map or structured note frame to generate and organise ideas',
-      'Language Scaffold Box — curated phrases, sentence starters, and discourse markers at the correct CEFR level',
-      'Guided Draft — writing task with a paragraph-by-paragraph structural prompt',
-      'Peer Editing Checklist — 5-criterion checklist for structured partner feedback'
-    ],
-    std:'Specify the exact text type (email / essay / narrative / report). Model text must match the CEFR level. Scaffold intensity decreases as exercises progress.'
-  },
-  speaking:{
-    label:'Speaking',
-    approach:'Task-Based Language Teaching — Willis Framework (1996)',
-    steps:[
-      'Lead-in Discussion — 2–3 engaging questions to activate topic and lower the affective filter',
-      'Language Input — key expressions, discourse markers, and communication strategies',
-      'Controlled Speaking — structured information gap or guided dialogue',
-      'Communicative Task — open role play, debate, or collaborative decision-making',
-      'Reflection — self-assessment: fluency, vocabulary range, communication success (1–5 scale + one improvement goal)'
-    ],
-    std:'Specify interaction patterns (pair / group / whole class). Include a speaking rubric with 3–4 criteria. Language input box must be available during the communicative task.'
-  }
+  grammar:{label:'Grammar',approach:'PPP — Presentation → Practice → Production',
+    steps:['Guided Discovery — students notice the target form in context before the rule is stated','Concept Check Questions (CCQs) — 2–3 yes/no questions verifying understanding of form, meaning, and use','Controlled Practice — gap-fill or transformation with a single correct answer','Semi-controlled Practice — guided dialogue or sentence completion; form constrained, meaning open','Freer Production — open situational task requiring natural deployment of the target structure'],
+    std:'Teach Form–Meaning–Use triad. Address the most frequent learner errors. Include a grammar reference box before controlled practice.'},
+  vocabulary:{label:'Vocabulary',approach:"Lexical Approach + Nation's 4 Strands",
+    steps:['Lexical Mapping — semantic cluster or word-web activating prior knowledge','Meaning in Context — students deduce meaning from a connected reading passage','Controlled Matching — word-to-definition or word-to-collocation pairing','Odd One Out — identify the misfit word and justify the choice in writing','Personalised Production — 3–5 sentences about the student\'s own life using target vocabulary'],
+    std:'Teach words in natural collocations, never in isolation. Cover register and connotation.'},
+  reading:{label:'Reading',approach:'Top-down + Bottom-up Integration',
+    steps:['Pre-reading Schema Activation — predict content from title, subheading, or 3 key words','Skimming for Gist — one-sentence summary or paragraph-heading matching in 90 seconds','Scanning for Specific Information — locate 5–6 facts, names, or figures','True / False / Not Given — critical reading requiring students to cite line numbers as evidence','Vocabulary from Context — infer the meaning of 4 highlighted words using surrounding context'],
+    std:'Use authentic or semi-authentic texts. All tasks answerable from the text alone. Include one post-reading personalised opinion question.'},
+  listening:{label:'Listening',approach:'Pre / While / Post Listening Framework',
+    steps:['Schema Activation — students predict 3 things they will hear; elicit topic vocabulary','Listening for Gist — one global question answered after a single complete listen','Listening for Detail — gap-fill or multiple choice on a second careful listen','Inference Task — what emotion or attitude is communicated but not stated directly?','Post-listening Response — personalised discussion question linking the audio to students\' own experience'],
+    std:'Specify audio type. Include tapescript for self-study. Each sub-task must have a distinct cognitive demand.'},
+  writing:{label:'Writing',approach:'Process Writing Approach (Hedge, 2005)',
+    steps:['Model Text Analysis — identify structure, register, and key language features','Brainstorming — mind-map or note frame to generate and organise ideas','Language Scaffold Box — curated phrases, starters, and discourse markers at this CEFR level','Guided Draft — writing task with paragraph-by-paragraph structural prompt','Peer Editing Checklist — 5-criterion checklist for structured partner feedback'],
+    std:'Specify the exact text type. Model text must match the CEFR level. Scaffold intensity decreases as exercises progress.'},
+  speaking:{label:'Speaking',approach:'Task-Based Language Teaching — Willis Framework (1996)',
+    steps:['Lead-in Discussion — 2–3 engaging questions to activate topic and lower the affective filter','Language Input — key expressions, discourse markers, and communication strategies','Controlled Speaking — structured information gap or guided dialogue','Communicative Task — open role play, debate, or collaborative decision-making','Reflection — self-assessment: fluency, vocabulary range, communication success (1–5 + improvement goal)'],
+    std:'Specify interaction patterns. Include a speaking rubric with 3–4 criteria. Language box must be available during the communicative task.'}
 };
 
 const DESIGNS = {
@@ -604,55 +557,60 @@ const DESIGNS = {
 };
 
 const CHIPS_DATA = [
-  {id:'crossword',  t:'🔤 Кроссворд',         p:'Include a crossword puzzle (min 8 words) with clues written in the target language.'},
-  {id:'translate',  t:'🔄 Перевод',            p:'Include a translation exercise (L1↔L2) using full contextual sentences, not isolated words.'},
-  {id:'pairs',      t:'👥 Парная работа',      p:'Design all productive tasks for pair work with clear Role A / Role B instruction cards.'},
-  {id:'groups',     t:'👨‍👩‍👧 Группы',            p:'Include at least one collaborative group task (3–4 students) with a defined shared outcome.'},
-  {id:'roleplay',   t:'🎭 Ролевая игра',       p:'Include a fully developed role play with a situation card and role cards for two participants.'},
-  {id:'mindmap',    t:'🧠 Mind Map',           p:'Include a guided mind-mapping activity (central concept + 3–4 branch prompts).'},
-  {id:'debate',     t:'⚡ Дебаты',             p:"Include a mini-debate with 3 argument prompts per side and a 'Useful Language' box."},
-  {id:'story',      t:'📖 Сторителлинг',       p:'Include a storytelling task using at least 6 lesson vocabulary items and a story-starter sentence.'},
-  {id:'game',       t:'🎮 Игровой элемент',    p:'Add a competitive game element (quiz race, bingo, or points challenge) with clear rules.'},
-  {id:'authentic',  t:'📰 Аутентичный текст',  p:'Use an authentic real-world source as main input (news excerpt, social post, advert, or email).'},
-  {id:'culture',    t:'🌍 Культурный аспект',  p:'Include an intercultural awareness task inviting comparison across cultures. Avoid stereotypes.'},
-  {id:'selfcheck',  t:'📊 Самооценка',         p:"End with a student self-assessment: 3 'I can…' statements rated not yet / almost / yes!"},
-  {id:'hw',         t:'🏠 Домашнее задание',   p:'Add a clearly labelled HOMEWORK task (10–15 min) extending the lesson topic independently.'},
-  {id:'notl1',      t:'🚫 Без перевода',       p:'All instructions and support must be entirely in the target language. No other language anywhere.'},
-  {id:'critical',   t:'🔍 Критическое мышление',p:"Include at least two higher-order tasks (Bloom's: analyse, evaluate, or create)."},
-  {id:'visual',     t:'🖼 Визуальные опоры',   p:'Include image placeholder zones with captions or a diagram to label.'},
-  {id:'audio',      t:'🎵 Аудио / скрипт',     p:'Design the page for an audio track. Include a full tapescript at the end. Specify speaker names and duration.'},
-  {id:'digital',    t:'💻 Цифровой формат',    p:'Format for digital use: fillable fields, interactive element placeholders, QR code zones.'},
-  {id:'errors',     t:'✏️ Работа с ошибками',  p:'Include an error correction exercise with 8 sentences containing typical learner errors for this level.'},
-  {id:'review',     t:'🔁 Повторение',         p:'Open with a 5-min warm-up reviewing 6–8 vocabulary items or grammar from the previous lesson.'}
+  {id:'crossword',t:'🔤 Кроссворд',p:'Include a crossword puzzle (min 8 words) with clues in the target language.'},
+  {id:'translate',t:'🔄 Перевод',p:'Include a translation exercise (L1↔L2) using full contextual sentences.'},
+  {id:'pairs',t:'👥 Парная работа',p:'Design all productive tasks for pair work with Role A / Role B cards.'},
+  {id:'groups',t:'👨‍👩‍👧 Группы',p:'Include one collaborative group task (3–4 students) with a defined shared outcome.'},
+  {id:'roleplay',t:'🎭 Ролевая игра',p:'Include a fully developed role play with a situation card and role cards.'},
+  {id:'mindmap',t:'🧠 Mind Map',p:'Include a guided mind-mapping activity (central concept + 3–4 branch prompts).'},
+  {id:'debate',t:'⚡ Дебаты',p:"Include a mini-debate with 3 argument prompts per side and a 'Useful Language' box."},
+  {id:'story',t:'📖 Сторителлинг',p:'Include a storytelling task using at least 6 lesson vocabulary items.'},
+  {id:'game',t:'🎮 Игровой элемент',p:'Add a competitive game element (quiz race, bingo, or points challenge) with clear rules.'},
+  {id:'authentic',t:'📰 Аутентичный текст',p:'Use an authentic real-world source as main input (news, social post, advert, or email).'},
+  {id:'culture',t:'🌍 Культурный аспект',p:'Include an intercultural awareness task inviting comparison across cultures.'},
+  {id:'selfcheck',t:'📊 Самооценка',p:"End with student self-assessment: 3 'I can…' statements, rated not yet / almost / yes!"},
+  {id:'hw',t:'🏠 Домашнее задание',p:'Add a HOMEWORK task (10–15 min) extending the lesson independently.'},
+  {id:'notl1',t:'🚫 Без перевода',p:'All instructions and support must be entirely in the target language.'},
+  {id:'critical',t:'🔍 Критическое мышление',p:"Include at least two higher-order tasks (Bloom's: analyse, evaluate, or create)."},
+  {id:'visual',t:'🖼 Визуальные опоры',p:'Include image placeholder zones with captions or a diagram to label.'},
+  {id:'audio',t:'🎵 Аудио / скрипт',p:'Design for audio track use. Include full tapescript. Specify speakers and duration.'},
+  {id:'digital',t:'💻 Цифровой формат',p:'Format for digital use: fillable fields, interactive placeholders, QR code zones.'},
+  {id:'errors',t:'✏️ Работа с ошибками',p:'Include error correction with 8 sentences containing typical learner errors.'},
+  {id:'review',t:'🔁 Повторение',p:'Open with a 5-min warm-up reviewing vocabulary or grammar from the previous lesson.'}
 ];
 
-/* ── state ─────────────────────────────── */
+/* ════════════════════════════════════════
+   STATE
+   ════════════════════════════════════════ */
 let lang = 'English';
 let skill = 'grammar';
 let design = 'Cambridge Classic';
 let chips = new Set();
+let selectedTools = new Set();
 
-/* ── setters ────────────────────────────── */
+/* ════════════════════════════════════════
+   SETTERS
+   ════════════════════════════════════════ */
 function setLang(btn, v) {
   document.querySelectorAll('.lang-pill').forEach(b => b.classList.remove('on'));
   btn.classList.add('on');
   lang = v;
-  const s = document.getElementById('langSlide');
-  v === '__other__' ? s.classList.add('open') : s.classList.remove('open');
+  document.getElementById('langSlide').classList.toggle('open', v === '__other__');
 }
 
 function setSkill(btn, v) {
   document.querySelectorAll('.skill-pill').forEach(b => b.classList.remove('on'));
   btn.classList.add('on');
   skill = v;
+  selectedTools.clear();
+  renderTools();
 }
 
 function setDesign(card, v) {
   document.querySelectorAll('.design-pill').forEach(c => c.classList.remove('on'));
   card.classList.add('on');
   design = v;
-  const s = document.getElementById('designSlide');
-  v === '__custom__' ? s.classList.add('open') : s.classList.remove('open');
+  document.getElementById('designSlide').classList.toggle('open', v === '__custom__');
 }
 
 function updateCEFR() {
@@ -662,7 +620,62 @@ function updateCEFR() {
     order.map((_,i) => `<div class="cefr-dot ${i<=idx?'on':''}"></div>`).join('');
 }
 
-/* ── chips ──────────────────────────────── */
+/* ════════════════════════════════════════
+   RENDER TOOLS
+   ════════════════════════════════════════ */
+function renderTools() {
+  const list = TOOLS[skill] || [];
+  const block = document.getElementById('toolsBlock');
+  const grid  = document.getElementById('toolsGrid');
+  const bar   = document.getElementById('toolsBar');
+  const title = document.getElementById('toolsTitle');
+
+  const skillLabels = {grammar:'Grammar',vocabulary:'Vocabulary',reading:'Reading',listening:'Listening',writing:'Writing',speaking:'Speaking'};
+  title.textContent = `Упражнения для ${skillLabels[skill]}`;
+
+  grid.innerHTML = '';
+  list.forEach(tool => {
+    const card = document.createElement('div');
+    card.className = 'tool-card' + (selectedTools.has(tool.id) ? ' on' : '');
+    card.innerHTML = `
+      ${tool.badge ? `<div class="tool-ribbon ${tool.badge}">${tool.badge}</div>` : ''}
+      <div class="tool-icon" style="background:${tool.bg}">${tool.icon}</div>
+      <div class="tool-text">
+        <div class="tool-name">${tool.name}</div>
+        <div class="tool-desc">${tool.desc}</div>
+      </div>`;
+    card.onclick = () => toggleTool(tool.id, card);
+    grid.appendChild(card);
+  });
+
+  block.classList.add('open');
+  updateToolsBar();
+}
+
+function toggleTool(id, card) {
+  selectedTools.has(id) ? selectedTools.delete(id) : selectedTools.add(id);
+  card.classList.toggle('on', selectedTools.has(id));
+  updateToolsBar();
+}
+
+function updateToolsBar() {
+  const bar = document.getElementById('toolsBar');
+  if (selectedTools.size === 0) {
+    bar.classList.remove('open');
+    bar.textContent = '';
+  } else {
+    const names = [...selectedTools].map(id => {
+      const list = TOOLS[skill] || [];
+      return list.find(t=>t.id===id)?.name || id;
+    });
+    bar.textContent = 'Выбрано: ' + names.join(' · ');
+    bar.classList.add('open');
+  }
+}
+
+/* ════════════════════════════════════════
+   CHIPS
+   ════════════════════════════════════════ */
 function initChips() {
   const wrap = document.getElementById('chips');
   CHIPS_DATA.forEach(c => {
@@ -673,21 +686,19 @@ function initChips() {
       chips.has(c.id) ? chips.delete(c.id) : chips.add(c.id);
       el.classList.toggle('on', chips.has(c.id));
       const echo = document.getElementById('chipsEcho');
-      if (chips.size === 0) {
-        echo.innerHTML = '<em>Нажми на кнопки выше, чтобы добавить</em>';
-      } else {
-        echo.textContent = [...chips].map(id => CHIPS_DATA.find(x=>x.id===id)?.t||id).join(' · ');
-      }
+      if (chips.size === 0) echo.innerHTML = '<em>Нажми на кнопки выше, чтобы добавить</em>';
+      else echo.textContent = [...chips].map(id => CHIPS_DATA.find(x=>x.id===id)?.t||id).join(' · ');
     };
     wrap.appendChild(el);
   });
 }
 
-/* ── prompt builder ─────────────────────── */
+/* ════════════════════════════════════════
+   BUILD PROMPT
+   ════════════════════════════════════════ */
 function buildPrompt() {
   const L = lang === '__other__'
-    ? (document.getElementById('langCustom').value.trim() || '[язык]')
-    : lang;
+    ? (document.getElementById('langCustom').value.trim() || '[язык]') : lang;
   const level    = document.getElementById('level').value;
   const duration = document.getElementById('duration').value;
   const topic    = document.getElementById('topic').value.trim() || '[тема не указана]';
@@ -698,8 +709,11 @@ function buildPrompt() {
 
   const m = METHOD[skill];
   const designSpec = design === '__custom__' ? (dc || '[стиль не описан]') : DESIGNS[design];
-  const reqLines = [...chips].map(id => `• ${CHIPS_DATA.find(c=>c.id===id)?.p||''}`);
-  if (extra) reqLines.push(`• ${extra}`);
+
+  const toolLines  = [...selectedTools].map(id => `• ${TOOL_PROMPTS[id]||id}`);
+  const chipsLines = [...chips].map(id => `• ${CHIPS_DATA.find(c=>c.id===id)?.p||''}`);
+  if (extra) chipsLines.push(`• ${extra}`);
+  const allReqs = [...toolLines, ...chipsLines];
 
   return `You are a senior ELT materials developer and certified Cambridge CELTA/DELTA trainer with 20+ years of experience creating award-winning workbooks for Cambridge University Press, Pearson, and Macmillan Education.
 
@@ -710,7 +724,7 @@ Create a complete, print-ready workbook page for a ${duration}-minute ${L} lesso
 LESSON SPECIFICATION
 ══════════════════════════════════════
 Language:     ${L}
-CEFR Level:   ${level} — adhere strictly to the official CEFR vocabulary and grammar inventories. Do not use structures or lexis from a higher band without explicit scaffolding.
+CEFR Level:   ${level} — adhere strictly to official CEFR vocabulary and grammar inventories. Do not use structures or lexis from a higher band without explicit scaffolding.
 Skill:        ${m.label} — ${m.approach}
 Topic:        ${topic}
 Duration:     ${duration} minutes
@@ -725,25 +739,25 @@ MANDATORY EXERCISE SEQUENCE (follow in exact order)
 ${m.steps.map((s,i)=>`${i+1}. ${s}`).join('\n')}
 
 Methodological standard: ${m.std}
-${reqLines.length?`\n══════════════════════════════════════\nSPECIAL REQUIREMENTS\n══════════════════════════════════════\n${reqLines.join('\n')}`:''}
+${allReqs.length ? `\n══════════════════════════════════════\nSPECIFIC EXERCISE TYPES & REQUIREMENTS\n══════════════════════════════════════\nIntegrate the following naturally into the exercise sequence:\n${allReqs.join('\n')}` : ''}
 
 ══════════════════════════════════════
 WORKBOOK DESIGN
 ══════════════════════════════════════
-Style: ${design==='__custom__'?'Custom':design}
+Style: ${design === '__custom__' ? 'Custom' : design}
 ${designSpec}
 
-Describe all visual formatting in enough detail for a DTP operator to reproduce the layout without interpretation.
+Describe all visual formatting with enough detail for a DTP operator to reproduce the layout without interpretation.
 
 ══════════════════════════════════════
 CONTENT STANDARDS
 ══════════════════════════════════════
-1. CEFR — All vocabulary and grammar within the ${level} range. Annotate borderline items [${level}+] with a brief rationale.
+1. CEFR — All vocabulary and grammar within ${level} range. Annotate borderline items [${level}+] with rationale.
 2. CONTEXT — All exercises share one coherent thematic thread ("${topic}"). No isolated filler sentences.
-3. SCAFFOLDING — Load increases gradually: recognition → manipulation → production. Each exercise enables the next.
-4. BLOOM'S — Early tasks: Remember/Understand. Later tasks: Apply/Analyse/Evaluate/Create. At least one task requires students to justify a choice or produce original language.
+3. SCAFFOLDING — Recognition → manipulation → production. Each exercise enables the next.
+4. BLOOM'S — Early tasks: Remember/Understand. Later: Apply/Analyse/Evaluate/Create. At least one task requires students to justify a choice or produce original language.
 5. LANGUAGE — All texts and examples must sound like real ${L} a native speaker would actually use.
-6. INSTRUCTIONS — All student-facing text in clear, level-appropriate ${L}. Students must be able to work independently.
+6. INSTRUCTIONS — All student-facing text in clear, level-appropriate ${L}. Students must work independently.
 7. INCLUSIVITY — Culturally neutral, diverse names and contexts, no stereotypes.
 
 ══════════════════════════════════════
@@ -756,19 +770,19 @@ OUTPUT STRUCTURE
    For each: bold type label · instruction in ${L} (max 2 sentences) · support note if needed · full exercise content · [⏱ X min]
 
 💡 LANGUAGE SUPPORT BOX
-   Compact reference (grammar rule / key vocabulary / useful phrases). Placed immediately before the exercise that requires it.
+   Compact reference (grammar rule / vocabulary / useful phrases). Placed before the exercise that requires it.
 
 ✅ ANSWER KEY
-   Full answers for closed tasks. For productive tasks: model answer + 2–3 sentence annotation on what makes it effective at ${level}.
+   Full answers for closed tasks. For productive tasks: model answer + 2–3 sentence annotation on effectiveness at ${level}.
 
 📝 TEACHER NOTES (max 5 bullets)
    Timing · common errors to anticipate · fast-finisher extension · differentiation tip · materials needed
 
 ══════════════════════════════════════
-BEFORE OUTPUTTING, VERIFY:
+VERIFY BEFORE OUTPUTTING:
 ══════════════════════════════════════
 □ All language within ${level} CEFR range
-□ Instructions in ${L} and unambiguous
+□ All instructions in ${L} and unambiguous
 □ Logical scaffolding throughout
 □ At least one higher-order thinking task
 □ Complete and accurate answer key
@@ -776,33 +790,32 @@ BEFORE OUTPUTTING, VERIFY:
 □ Content relevant to "${topic}"
 □ Design described with DTP precision
 
-Output the workbook directly — no preamble, no meta-commentary.`;
+Output the workbook directly — no preamble or meta-commentary.`;
 }
 
-/* ── generate ───────────────────────────── */
+/* ════════════════════════════════════════
+   GENERATE
+   ════════════════════════════════════════ */
 function generate() {
   const prompt = buildPrompt();
-  const L = lang==='__other__'
-    ? (document.getElementById('langCustom').value.trim()||'?') : lang;
+  const L = lang==='__other__' ? (document.getElementById('langCustom').value.trim()||'?') : lang;
   const level  = document.getElementById('level').value;
   const topic  = document.getElementById('topic').value.trim();
-  const skillLabel = document.querySelector('.skill-pill.on')?.textContent?.trim()||skill;
-  const dLabel = design==='__custom__'?'Custom':design;
+  const sl     = document.querySelector('.skill-pill.on')?.textContent?.trim()||skill;
+  const dl     = design==='__custom__'?'Custom':design;
 
   document.getElementById('tags').innerHTML =
-    [L, level, skillLabel, document.getElementById('duration').value+'min',
-     document.getElementById('tone').value, dLabel]
+    [L,level,sl,document.getElementById('duration').value+'min',
+     document.getElementById('tone').value,dl]
     .map(t=>`<span class="tag">${t}</span>`).join('');
 
   document.getElementById('resultBody').textContent = prompt;
-
   const btn = document.getElementById('copyBtn');
-  btn.textContent = 'Копировать';
-  btn.className = 'copy-btn';
+  btn.textContent = 'Копировать'; btn.className = 'copy-btn';
 
   const res = document.getElementById('result');
   res.classList.add('open');
-  res.scrollIntoView({ behavior:'smooth', block:'start' });
+  res.scrollIntoView({behavior:'smooth',block:'start'});
 }
 
 function doCopy() {
@@ -810,15 +823,15 @@ function doCopy() {
   if (!text) return;
   navigator.clipboard.writeText(text).then(() => {
     const btn = document.getElementById('copyBtn');
-    btn.textContent = '✓ Скопировано';
-    btn.classList.add('ok');
+    btn.textContent = '✓ Скопировано'; btn.classList.add('ok');
     setTimeout(() => { btn.textContent='Копировать'; btn.classList.remove('ok'); }, 2500);
   });
 }
 
-/* ── init ───────────────────────────────── */
+/* ── init ── */
 initChips();
 updateCEFR();
+renderTools();
 </script>
 </body>
 </html>
